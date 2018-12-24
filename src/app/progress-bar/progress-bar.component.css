@@ -1,0 +1,49 @@
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.flex > * {
+  -ms-flex: 0 1 auto;
+}
+.progressBar {
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px;
+}
+.progressBar .seg {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  min-height: 20px;
+  border-right: 1em solid white;
+  z-index: 2;
+}
+.progressBar .last {
+  border-right: 0px;
+}
+.progressBar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgb(70,4,90);
+  background: linear-gradient(90deg, rgba(70,4,90,1) 0%, rgba(192,42,225,1) 49%, rgba(228,112,12,1) 100%);
+}
+.progressBar .incomplete-progress {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+}
+
+.progressBar.large .seg {
+  min-height: 1.2em;
+}
+

@@ -1,0 +1,9 @@
+<hr>
+<div class="progressBar large">
+  <div *ngFor="let segment of segments" class="seg"></div>
+  <div class="incomplete-progress" [ngStyle]="{'width': incompleteProgressWidth}"></div>
+</div>
+<button (click)="decrProgress()">Go Back</button>
+<button (click)="incrProgress()">Go Forward</button>
+<hr>
+
