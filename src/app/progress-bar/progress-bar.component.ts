@@ -31,8 +31,11 @@ export class ProgressBarComponent implements OnInit {
 
   }
   incrProgress(): void {
-    if (this.incompletePercentage >= this.step) {
-      this.incompletePercentage -= this.step;
+    console.log(`this.incompletePercentage: ${Math.floor(this.incompletePercentage)}`);
+    console.log(`this.step: ${Math.floor(this.step)}`);
+    if ( Math.floor(this.incompletePercentage) >=  Math.floor(this.step)) {
+      this.incompletePercentage > this.step ? this.incompletePercentage -= this.step : this.incompletePercentage = 0;
+      // this.incompletePercentage -= this.step
       this.incompleteProgressWidth = `${this.incompletePercentage}%`;
     }
   }
